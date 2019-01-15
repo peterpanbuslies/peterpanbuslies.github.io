@@ -1,0 +1,236 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Google Tag Manager -->
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WSJPMR');
+</script>
+<!-- End Google Tag Manager -->
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<meta name="apple-itunes-app" content="app-id=926963766">
+
+<meta name="theme-color" content="#000000">
+<meta name="msapplication-navbutton-color" content="#000000">
+<meta name="apple-mobile-web-app-status-bar-style" content="#000000">
+
+<link rel="icon" href="https://webstore.peterpanbus.com/mobile/PPB/favicon.png" type="image/png">
+
+<link rel="stylesheet" href="https://webstore.peterpanbus.com/mobile/PPB/style.css" type="text/css">
+<title>Order Receipt (Peter Pan)</title>
+<script type="text/javascript">
+function toggleMenu(makeVisible) {
+	document.getElementById('shadowbox').style.display = (makeVisible ? 'block' : 'none');
+	document.getElementById('menu').style.display = (makeVisible ? 'block' : 'none');
+	return false;
+}
+</script>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WSJPMR" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!-- Flatpickr -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+<!-- Flatpickr -->
+<p id="titlebar">
+
+	<a href="#" onclick="return toggleMenu(true)"><img src="https://webstore.peterpanbus.com/mobile/images/menu-icon.png" alt="Menu" class="menuopen"></a>
+	<img src="titlebar-logo.png" alt="Peter Pan">
+
+</p>
+<div id="content">
+
+<h1>Confirmation 1820652</h1>
+<p class="progressbar">
+	<span class="prev" onclick="showSegment(this, 'Start')"></span>
+	<span class="prev" onclick="showSegment(this, 'Schedules')"></span>
+	<span class="prev" onclick="showSegment(this, 'Passengers')"></span>
+	<span class="prev" onclick="showSegment(this, 'Pay')"></span>
+	<span class="curr filled" onclick="showSegment(this, 'Ride')">Ride</span>
+</p>
+
+<p><strong>Boarding Passes</strong></p>
+
+<p class="bpinfo">
+	
+	<strong><span class="zzz-name"></span></strong><br>
+	<span class="zzz-depart"></span> to <span class="zzz-arrive"></span><br>
+		<span class="zzz-date"></span> <span class="zzz-time"></span><br>
+	<span class="zzz-busId"></span><br>
+	Seat General<br><button onclick="location.href = 'email-to-mobile.asp?o=1820752&amp;h=cokArcYi175A8HGJfPP_-zDhITk__ex5&amp;b=0001170129018207526'" style="float: right; margin: 0 0 0.25em 0;">E-mail to Mobile</button><button type="button" onclick="gotoPass('0001170129018207526')">View on Mobile</button>
+</p>
+
+<script type="text/javascript">
+function showSegment(el, text) {
+	if (el.hasChildNodes() && el.childNodes[0].innerHTML != '') return false;
+	var p = el.parentNode;
+	for (var i = 0; i < p.childNodes.length; ++i) {
+		if (p.childNodes[i].nodeName.toLowerCase() == 'span') {
+			p.childNodes[i].className = p.childNodes[i].className.replace(' filled', '');
+			p.childNodes[i].innerHTML = '';
+		}
+	}
+	el.className = el.className + ' filled';
+	el.innerHTML = text;
+	return false;
+}
+function gotoPass(bpno) {
+	location.href = 'mobile.html';
+}
+</script>
+<p><strong>Purchase Information</strong></p>
+<table class="receipt">
+	<tr>
+		<th>Product</th>
+		<th class="currency">Cost</th>
+	</tr>
+
+	<tr>
+		<td><span class="zzz-name"></span>'s ticket</td>
+		<td class="currency">$<span class="zzz-price"></span>.00</td>
+	</tr>
+	<tr>
+		<td class="note"><strong>Web Passenger (WU)</strong><br>
+			<strong><span class="zzz-depart"></span></strong> to <strong><span class="zzz-arrive"></span> </strong><br>
+			Dep: <span class="zzz-busId"></span>, <span class="formatted-date"></span><br>
+			0 bags</td>
+		<td class="note"></td>
+	</tr>
+
+	<tr>
+		<td>Transaction Fee</td>
+		<td class="currency">$2.00</td>
+	</tr>
+
+	<tr class="total">
+		<td>Total</td>
+		<td class="currency">$<span class="zzz-total"></span>.00</td>
+	</tr>
+
+	<tr>
+		<td>
+			Visa<br>****-****-****-4337
+		</td>
+		<td class="currency">-$<span class="zzz-total"></span>.00</td>
+	</tr>
+
+</table>
+<p><button onclick="location.href = 'email-to-mobile.asp?o=1820752&amp;h=cokArcYi175A8HGJfPP_-zDhITk__ex5'">E-mail Receipt</button></p>
+<p><strong>Buyer Information</strong></p>
+<table class="receipt">
+	<tr>
+		<td>Name</td>
+		<td><span class="zzz-name"></span></td>
+	<tr>
+		<td>Address</td>
+		<td><span class="zzz-address"></span></td>
+	</tr>
+	<tr>
+		<td>Phone</td>
+		<td>--</td>
+	</tr>
+	<tr>
+		<td>Mobile</td>
+		<td><span class="zzz-phone"></span></td>
+	</tr>
+	<tr>
+		<td>E-mail Address</td>
+		<td><span class="zzz-email"></span></td>
+	</tr>
+</table>
+<p><strong>Processing Information</strong></p>
+<table class="receipt">
+	<!-- comment -->
+	<tr>
+		<td>Order Placed</td>
+		<td><span class="purchased-date"></span></td>
+	</tr>
+	<tr>
+		<td>Processed By</td>
+		<td>Bonanza Bus Lines<br>
+			(800-343-9999)</td>
+	</tr>
+
+	<tr>
+		<td>Payment Type</td>
+		<td>Visa
+****-****-****-4337</td>
+	</tr>
+	<tr>
+		<td>Authorization Code</td>
+		<td>02609C</td>
+	</tr>
+	<tr>
+		<td>AVS Response</td>
+		<td></td>
+	</tr>
+
+</table>
+
+	<p id="copyright">&copy; 2019<a href="https://bustickets.com/carriers/peter-pan-bus-lines/"  title="Peter Pan Bus Tickets">Peter Pan Bus Lines</a>powered by<a href="https://tdstickets.com/" title=“Transcor Data Services, TDS” target="_blank">TDS Tickets.</a>All Rights Reserved.</p>
+</div>
+<div id="shadowbox" onclick="return toggleMenu(false)"></div>
+<div id="menu">
+	<div id="companylogo">
+		<p><a href="#" onclick="return toggleMenu(false)"><img src="https://webstore.peterpanbus.com/mobile/images/back-button.png" alt="Close"></a> Peter Pan</p>
+	</div>
+	<ul>
+    <li><a href="">Home</a></li>
+		<li><a href="purchase-ticket.asp">Buy tickets</a></li>
+		<li><a href="https://peterpanbus.com/travel-info/bus-locator/">Locate My Bus</a></li>
+
+		<li><a href="profile.asp">My profile</a></li>
+		<li><a href="find-order.asp">Find an order</a></li>
+
+		<li><a href="locations.asp">Bus service locations</a></li>
+
+		<li><a href="https://peterpanbus.com/?fs=1">Full site</a></li>
+	</ul>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://momentjs.com/downloads/moment.js"></script>
+<script>
+	if (localStorage.getItem('data')) {
+		var data = JSON.parse(localStorage.getItem('data'));
+	} else {
+		var data = {
+			name: 'Sam Williams',
+			email: 'swilliams001@gmail.com',
+			phone: '5085601337',
+			address: '86 Main St. Vineyard Haven, MA 02568',
+			depart: 'WHOL',
+			arrive: 'LOG',
+			date: '1 Jan 2019',
+			time: '12:00 PM',
+			busId: 'BZ 0564',
+			price: 35,
+		};
+	}
+
+	$('.zzz-name').text(data.name)
+	$('.zzz-email').text(data.email)
+	$('.zzz-phone').text(data.phone)
+	$('.zzz-address').text(data.address)
+	$('.zzz-depart').text(data.depart)
+	$('.zzz-arrive').text(data.arrive)
+	$('.zzz-date').text(data.date)
+	$('.zzz-time').text(data.time)
+	$('.zzz-busId').text(data.busId)
+	$('.zzz-price').text(data.price)
+	$('.zzz-total').text(parseInt(data.price) + 2)
+
+
+	$('.formatted-date').text(moment(data.date, 'D MMM YYYY').format('MM/DD/YYYY'))
+	$('.purchased-date').text(moment(data.date + ' ' + data.time, 'D MMM YYYY HH:mm A').subtract('21', 'minutes').format('D MMM YYYY HH:mm A'))
+</script>
+</body>
+</html>
